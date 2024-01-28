@@ -195,3 +195,63 @@ table th {
   text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
 }
 
+/* FilterScreen.module.css */
+.filterScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.filterForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #ffe678;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.customTable {
+  width: 100%;
+  background-color: #fff;
+  border-collapse: collapse;
+}
+
+.customTable thead {
+  background-color: #ffe678;
+  color: #000000;
+}
+
+.customTable thead th {
+  padding: 10px;
+  text-align: left;
+}
+
+.customTable tbody td {
+  padding: 10px;
+  border-color: #dee2e6;
+}
+
+.customTableStriped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.customTableHover tbody tr:hover {
+  background-color: rgba(0, 0, 0, .075);
+}

@@ -6,6 +6,9 @@ import grades from './data/grade.js';
 import users from './data/student.js';
 
 import gradeRoutes from './routes/gradeRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+import { notFound,errorHandler } from './middleware/errorMiddleware.js';
+
 
 const port=process.env.PORT ||5000;
 
@@ -18,9 +21,11 @@ app.get('/',(req,res)=>{
 });
 
 app.use('/api/grades',gradeRoutes);
+app.use('/api/users',userRoutes);
 
-app.get('/api/users',(req,res)=>{
-    res.json(users);
-});
+app.use(notFound);
+app.use(errorHandler);
+
+
 
 app.listen(port,()=>console.log(`Server running on port ${port}`));

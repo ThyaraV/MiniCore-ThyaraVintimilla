@@ -1,5 +1,4 @@
 import{Navbar,Nav,Container} from 'react-bootstrap';
-import {FaShoppingCart, FaUser} from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
 const Header =()=>{
@@ -13,7 +12,7 @@ const Header =()=>{
                     <Navbar.Toggle aria-controls='basic-navbar-nav'/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className='ms-auto'>
-                            <Nav.Link href='/busqueda'>Buscar</Nav.Link>
+                            <Nav.Link href='/filter'>Buscar</Nav.Link>
                             <Nav.Link href='/progreso'>Calificaciones</Nav.Link>
                             
                         </Nav>

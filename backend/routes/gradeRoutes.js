@@ -1,23 +1,8 @@
 import express from "express";
-import grades from "../data/grade.js";
-import asyncHandler from "../middleware/asyncHandler.js";
-import Grade from "../models/gradeModel.js";
-
 const router=express.Router();
+import { getGrades,getGradesById } from "../controllers/gradeController.js";
 
-router.get('/',asyncHandler(async(req,res)=>{
-    const grades=await Grade.find({});
-    res.json(grades);
-}));
-
-router.get('/:id',asyncHandler(async(req,res)=>{
-    const grade=await Grade.findById(req.params.id);
-
-    if(grade){
-       return res.json(grade);
-    }
-    
-    res.status(404).json({message:'Grade not found'})
-}));
+router.route('/').get(getGrades);
+router.route('/:id').get(getGradesById);
 
 export default router;
