@@ -40,4 +40,19 @@ const getUserProfile=asyncHandler(async(req,res)=>{
     }
 });
 
-export {getUsers,getUserByID,getUserProfile}
+const createUser=asyncHandler(async(req,res)=>{
+    const{name,career}=req.body; 
+    const user=new User({
+        name: name,
+        career:career,
+    });
+    if(user){
+        const createdUser = await user.save();
+        res.status(201).json(createdUser);
+    }else{
+        res.status(400);
+        throw new Error('Datos del usuario inválidos')
+    }
+});
+
+export {getUsers,getUserByID,getUserProfile,createUser}

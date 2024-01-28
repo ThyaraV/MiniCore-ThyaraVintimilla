@@ -16,4 +16,18 @@ const getGradesById=asyncHandler(async(req,res)=>{
      }
 })
 
-export {getGrades,getGradesById};
+const createGrade = asyncHandler(async (req, res) => {
+    const { user, grade, startDate, endDate } = req.body;
+
+    const newGrade = new Grade({
+        user,
+        grade,
+        startDate,
+        endDate
+    });
+
+    const createdGrade = await newGrade.save();
+    res.status(201).json(createdGrade);
+});
+
+export {getGrades,getGradesById,createGrade};
