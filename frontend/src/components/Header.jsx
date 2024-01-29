@@ -13,7 +13,7 @@ const Header =()=>{
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className='ms-auto'>
                             <Nav.Link href='/filter'>Buscar</Nav.Link>
-                            <Nav.Link href='/progreso'>Calificaciones</Nav.Link>
+                            <Nav.Link href='/progreso'>Progresos</Nav.Link>
                             
                         </Nav>
                     </Navbar.Collapse>

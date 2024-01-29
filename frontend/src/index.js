@@ -16,12 +16,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/HomeScreen';
 import FilterScreen from './screens/FilterScreen.jsx';
+import ProgresoScreen from './screens/progresoScreen.jsx';
 
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
       <Route index={true} path='/' element={<HomeScreen/>}></Route>
       <Route path='/filter' element={<FilterScreen/>}></Route>
+      <Route path='/progreso' element={<ProgresoScreen/>}></Route>
     </Route>
   )
 )

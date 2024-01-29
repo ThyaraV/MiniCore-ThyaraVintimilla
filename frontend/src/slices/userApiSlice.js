@@ -7,7 +7,7 @@ export const usersApiSlice=apiSlice.injectEndpoints({
             query:()=>({
                 url: USERS_URL
             }),
-            providesTags:['Users'],
+            providesTags:['User'],
             KeepUnusedDataFor:5
         }),
         getUserDetails:builder.query({

@@ -19,17 +19,15 @@ const HomeScreen = () => {
               <tr>
                 <th>User ID</th> {/* Cambia a User Name si tienes los nombres disponibles */}
                 <th>Grade</th>
-                <th>Start Date</th>
-                <th>End Date</th>
+                <th>Date</th>
               </tr>
             </thead>
             <tbody>
               {grades.map(grade => (
                 <tr key={grade._id}>
-                  <td>{grade.user}</td> {/* Asumiendo que 'user' es un ID de usuario. Deberías buscar el nombre del usuario con este ID. */}
+                  <td>{grade.user.name}</td> 
                   <td>{grade.grade}</td>
                   <td>{new Date(grade.startDate).toLocaleDateString()}</td>
-                  <td>{new Date(grade.endDate).toLocaleDateString()}</td>
                 </tr>
               ))}
             </tbody>

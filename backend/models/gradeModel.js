@@ -16,10 +16,6 @@ const gradeSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    endDate: {
-        type: Date,
-        required: true
-    }
 });
 
 const Grade = mongoose.model("Grade", gradeSchema);

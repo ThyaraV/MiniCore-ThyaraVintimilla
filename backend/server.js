@@ -7,6 +7,8 @@ import users from './data/student.js';
 
 import gradeRoutes from './routes/gradeRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import progresoRoutes from './routes/progresoRoutes.js';
+
 import { notFound,errorHandler } from './middleware/errorMiddleware.js';
 
 
@@ -24,6 +26,7 @@ app.get('/',(req,res)=>{
 
 app.use('/api/grades',gradeRoutes);
 app.use('/api/users',userRoutes);
+app.use('/api/progresos',progresoRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
