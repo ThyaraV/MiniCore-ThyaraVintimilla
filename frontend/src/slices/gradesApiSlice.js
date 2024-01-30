@@ -1,4 +1,4 @@
-import { GRADES_URL,UPLOAD_URL } from "../constants.js";
+import { GRADES_URL,PROGRESO_URL } from "../constants.js";
 import { apiSlice } from "./apiSlice.js";
 //lógica de interacción con APIs
 export const gradesApiSlice=apiSlice.injectEndpoints({

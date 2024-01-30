@@ -1,4 +1,4 @@
-import { PROGRESO_URL,UPLOAD_URL } from "../constants.js";
+import { PROGRESO_URL} from "../constants.js";
 import { apiSlice } from "./apiSlice.js";
 //lógica de interacción con APIs
 export const progresosApiSlice=apiSlice.injectEndpoints({
@@ -10,7 +10,13 @@ export const progresosApiSlice=apiSlice.injectEndpoints({
             providesTags: ['Progreso'],
             keepUnusedDataFor: 5
         }),
+        getWeightedProgress: builder.query({
+            query: () =>({
+                url: PROGRESO_URL,
+            }),
+            providesTags: ['Progreso'],
+          }),
     }),
 });
 
-export const {useGetProgresosQuery}=progresosApiSlice;
+export const {useGetProgresosQuery,useGetWeightedProgressQuery}=progresosApiSlice;
