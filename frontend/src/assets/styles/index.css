@@ -255,3 +255,51 @@ table th {
 .customTableHover tbody tr:hover {
   background-color: rgba(0, 0, 0, .075);
 }
+
+/* Resto del código existente... */
+
+/* Estilos para la tabla */
+.customTable {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+  margin-top: 20px; /* Espacio arriba de la tabla */
+}
+
+.customTable thead {
+  background-color: #ffcc5c; /* Color de fondo del encabezado */
+  color: #000; /* Color de texto del encabezado */
+}
+
+.customTable thead th {
+  font-weight: bold; /* Texto en negrita para el encabezado */
+  padding: 15px 10px; /* Espaciado interno para celdas del encabezado */
+  border-bottom: 2px solid #000; /* Borde inferior del encabezado */
+}
+
+.customTable tbody td {
+  padding: 15px 10px; /* Espaciado interno para celdas del cuerpo */
+  border-bottom: 1px solid #ccc; /* Borde inferior para celdas del cuerpo */
+}
+
+.customTable tbody tr:hover {
+  background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+}
+
+/* Colores para las celdas de progreso según la condición */
+.progreso-green {
+  background-color: #9ccc65; /* Verde cuando la nota es mayor que lo necesario */
+}
+
+.progreso-yellow {
+  background-color: #ffeb3b; /* Amarillo cuando la nota es igual a lo necesario */
+}
+
+.progreso-red {
+  background-color: #e57373; /* Rojo cuando la nota no es suficiente o está ausente */
+}
+.bold-text {
+  font-weight: bold; /* Aplica texto en negrita */
+  color: #5a5a5a; /* Color de texto del encabezado */
+}
+

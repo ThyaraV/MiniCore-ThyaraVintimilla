@@ -12,9 +12,10 @@ export const progresosApiSlice=apiSlice.injectEndpoints({
         }),
         getWeightedProgress: builder.query({
             query: () =>({
-                url: PROGRESO_URL,
+                url: `${PROGRESO_URL}/calculo`,
             }),
             providesTags: ['Progreso'],
+            keepUnusedDataFor: 5
           }),
     }),
 });

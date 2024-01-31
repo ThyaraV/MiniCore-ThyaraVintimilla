@@ -1,5 +1,7 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import Progreso from "../models/progresoModel.js";
+import Grade from "../models/gradeModel.js";
+import User from "../models/studentModel.js";
 
 const getProgreso=asyncHandler(async(req,res)=>{
     const progresos=await Progreso.find({}).populate('user', 'name');;
@@ -30,8 +32,8 @@ const calculateWeightedProgress = asyncHandler(async (req, res) => {
     // Para cada progreso, encuentra las calificaciones correspondientes y calcula
     for (const progreso of progresos) {
         const gradesInRange = await Grade.find({
-            startDate: { $gte: progreso.startDate },
-            endDate: { $lte: progreso.endDate }
+            startDate: { $gte: progreso.startDate,
+                $lte: progreso.endDate },
         }).populate('user', 'name');
 
         // Calcular el promedio para cada usuario
@@ -62,5 +64,6 @@ const calculateWeightedProgress = asyncHandler(async (req, res) => {
 
     res.json(userProgress);
 });
+
 
 export {getProgreso,createProgreso,calculateWeightedProgress}
