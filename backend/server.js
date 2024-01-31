@@ -25,7 +25,7 @@ app.use(express.json());
 app.use('/api/grades',gradeRoutes);
 app.use('/api/users',userRoutes);
 app.use('/api/progresos',progresoRoutes);
-
+/*
 const __dirname=path.resolve();
 app.use('/uploads',express.static(path.join(__dirname,'/uploads')));
 
@@ -38,7 +38,7 @@ if(process.env.NODE_ENV === 'production'){
     app.get('/',(req,res)=>
     res.end('API is running....'));
 }
-
+*/
 app.use(notFound);
 app.use(errorHandler);
 
