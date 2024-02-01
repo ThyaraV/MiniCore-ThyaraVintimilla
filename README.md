@@ -10,3 +10,7 @@ Si el usuario tiene menor puntaje o no tinene un puntaje al que necesita para pa
 
 https://minicorethyaravin.onrender.com/progreso
 
+## Link del video 
+
+https://www.youtube.com/watch?v=0cIjeyKIFfg
+
