@@ -44,6 +44,8 @@ https://udla.udemy.com/course/mern-ecommerce/learn/lecture/38105894#overview
 ## Información de contacto
 
 Correo personal: tita072002@hotmail.com
+
 Correo académico: thyara.vintimilla@udla.edu.ec
+
 Ig: thyara_vs
 
